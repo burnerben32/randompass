@@ -41,53 +41,53 @@ User Version:
 		
 	That is the basic structure of the program. The nitty gritty can be found in the comments of the source code.
 	
-	Command Line Version:
-		The command line version functions this way in sudocode:
+Command Line Version:
+	The command line version functions this way in sudocode:
 		
-		{start sudocode
+	{start sudocode
 		
-		get length of command line arguments
+	get length of command line arguments
 		
-		if the there is more than just randompass_commandline.py run this loop:
-			if the first command line argument is -h:
-				print help info
-			if the first command line argument is -b:
-				make the second command line argument "bytes"
-			if the first command line statement is -f:
-				make the second command line argument "format"
-			if the first command life argument is -s:
-				make the file choice yes
-				make the second command line argument "file_name"
+	if the there is more than just randompass_commandline.py run this loop:
+		if the first command line argument is -h:
+			print help info
+		if the first command line argument is -b:
+			make the second command line argument "bytes"
+		if the first command line statement is -f:
+			make the second command line argument "format"
+		if the first command life argument is -s:
+			make the file choice yes
+			make the second command line argument "file_name"
 				
-			end sudocode} (just for a little bit though)
+	end sudocode} (just for a little bit though)
 			
-			This continues on for the third and fifth command line arguements so any idiot can put the arguments in any order and get a password.
+	This continues on for the third and fifth command line arguements so any idiot can put the arguments in any order and get a password.
 			
-			If they do screw it up anyways or dont get how to use it at all and just run randompass_commandline.py with no arguements a helpful statement will be displayed.
+	If they do screw it up anyways or dont get how to use it at all and just run randompass_commandline.py with no arguements a helpful statement will be displayed.
 			
-			Now the sudocode for the actual generation:
+	Now the sudocode for the actual generation:
 			
-			{start sudocode again
+	{start sudocode again
 			
-			if there is more than two arguements start generation loop:
-				if the format is 1:
-					generate hex password at desired length
-					set "gen" to 1(true)
-				if the format is 2:
-					generate a url-safe password at desired length
-					set "gen to 1(true)
-				if gen is 1(true):
-					print the password
-					if "file_choice" is yes:
-						open the file
-						paste the password
-						copy the contents of the file to "file_content"
-						close the file
-						if "file_content" is the same as the generated password:
-							print your password was pasted to file.txt
-				press enter to quit
+	if there is more than two arguements start generation loop:
+		if the format is 1:
+			generate hex password at desired length
+			set "gen" to 1(true)
+		if the format is 2:
+			generate a url-safe password at desired length
+			set "gen to 1(true)
+		if gen is 1(true):
+			print the password
+			if "file_choice" is yes:
+				open the file
+				paste the password
+				copy the contents of the file to "file_content"
+				close the file
+				if "file_content" is the same as the generated password:
+					print your password was pasted to file.txt
+		press enter to quit
 				
-			end sudo code once and for all} unless...
+	end sudo code once and for all} unless...
 					
 				
 			
